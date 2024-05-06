@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db: 
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=php_docker
+      - MYSQL_USER=php_docker
+      - MYSQL_PASSWORD=password
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d"
+
+  www:
+    image: project
+    volumes:
+      - "./:/var/www/html"
+    ports:
+      - "80:80" # Map port 8080 on host to port 80 in container
+      - "441:441" # SSL traffic
+  
+  
