@@ -13,12 +13,6 @@
 
 ---
 
-## Requirements
-- **Docker**: Install Docker from [here](https://docs.docker.com/get-docker/).
-- **Docker Compose**: Install Docker Compose from [here](https://docs.docker.com/compose/install/).
-
----
-
 ## How It Works
 
 ### 1. **Dockerfile**
